@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Prisoner Training</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <button id="back">TOP</button>
+
+  <section class="box">
+    <section class="result">
+      <div>push up</div>
+      <ul id="pushUp">
+      </ul>
+    </section>
+
+    <section class="result">
+      <div>pull up</div>
+      <ul id="pullUp">
+        
+      </ul>
+    </section>
+    <section class="result">
+      <div>leg raise</div>
+      <ul id="legRaise">
+        <ul>
+      
+      </ul>
+    </section>
+    <section class="result">
+      <div>squat</div>
+      <ul id="squat">
+        <ul>
+        
+      </ul>
+    </section>
+    <section class="result">
+      <div>bridge</div>
+      <ul id="bridge">
+        <ul>
+        
+      </ul>
+    </section>
+    <section class="result">
+      <div>hand stand push up</div>
+      <ul id="handStandPushUp">
+        <ul>
+       
+      </ul>
+    </section>
+  </section>  
+
+  <script>
+    let typeArray = {
+      pushUp: {
+        "wall push up" : 0,
+        "incline push up" : 0,
+        "kneeing push up" : 0,
+        "half push up" : 0,
+        "full push up" : 0,
+        "close push up" : 0,
+        "uneven push up" : 0,
+        "half one arm push up" : 0,
+        "lever push up" : 0,
+        "one arm push up" : 0,
+      },
+      pullUp: {
+        "vertical pull" : 0,
+        "horizontal pull" : 0,
+        "jack knife pull" : 0,
+        "half pull up" : 0,
+        "full pull up" : 0,
+        "close pull up" : 0,
+        "uneven pull up" : 0,
+        "half one arm pull up" : 0,
+        "assisted one arm pull up" : 0,
+        "one arm pull up" : 0,
+      },
+      squat: {
+        "shoulder stand squat" : 0,
+        "jack knife squat" : 0,
+        "saported squat" : 0,
+        "half squat" : 0,
+         "full squat" : 0,
+         "close squat" : 0,
+         "uneven squat" : 0,
+         "half one leg squat" : 0,
+         "asisted one leg squat" : 0,
+         "one leg squat" : 0,
+      },
+      legRaise: {
+        "knee tack" : 0,
+        "flat knee raise" : 0,
+        "flat bent reg raise" : 0,
+        "flat flog raise" : 0,
+        "flat straight leg raise" : 0,
+        "hanging knee raise" : 0,
+        "hanging bent leg raise" : 0,
+        "hanging flog raise" : 0,
+        "partial straight leg raise" : 0,
+        "hanging straight leg raise" : 0,        
+              },
+      bridge: {
+        "short bridge" : 0,
+        "straight bridge" : 0,
+        "angled bridge" : 0,
+        "head bridge" : 0,
+        "half bridge" : 0,
+        "full bridge" : 0,
+        "wall walking bridge down" : 0,
+        "wall walking bridge up" : 0,
+        "closing bridge" : 0,
+        "stand to stand bridge" : 0,
+      },
+      handStandPushUp: {
+        "wall head stand" : 0,
+        "crow stand" : 0,
+        "wall hand stand" : 0,
+        "half hand stand" : 0,
+        "hand stand push up" : 0,
+        "close hand stand push up" : 0,
+        "uneven hand stand push up" : 0,
+        "half one arm hand stand push up" : 0,
+        "lever hand stand push up" : 0,
+        "one arm hand stand push up" : 0,
+      },
+    };
+
+    function culculateNumber(obj, key) {
+      typeArray[key][obj.type] += parseInt(obj.set1) + parseInt(obj.set2) + parseInt(obj.set3);
+    }
+    
+    function renderNumber(type, step, value) {
+      const name = document.createElement('li');
+      name.textContent = step;
+
+      const num = document.createElement('span');
+      num.textContent = value;
+      num.classList.add('sum');
+      
+      name.appendChild(num);
+      document.getElementById(type).appendChild(name);  
+    }
+    
+    let infoArray = []
+
+    back.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+    
+    if (localStorage.length === 0) {
+      // 空文
+    } else {
+      for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let obj = JSON.parse(localStorage.getItem(key));
+        
+        for (let key in typeArray) {
+          for (let key2 in typeArray[key]) {
+            if (obj.type === key2) {
+              culculateNumber(obj, key);
+            }
+          }
+        }
+          infoArray.push(obj);
+      }
+
+      for (let key in typeArray) {
+        for (let key2 in typeArray[key]) {
+          renderNumber(key, key2, typeArray[key][key2]);
+        };
+      };
+    }
+  </script>
+</body>
+</html>

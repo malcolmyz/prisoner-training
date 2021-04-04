@@ -1,0 +1,90 @@
+body {
+  background: #bdc3c7;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#input {
+  width: 300px;
+  background: #ecf0f1;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 5px;
+}
+
+#inputSet {
+  display: flex;
+  justify-content: space-between;
+}
+
+#set1, #set2, #set3 {
+  width: 25px;
+}
+
+#submit {
+ width: 300px;
+}
+
+#container {
+  width: 600px;
+  background: #ecf0f1;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 5px;
+  font-size:14px;
+}
+
+#record {
+  display: grid;
+  grid-template-columns: repeat(5, 120px);
+  gap: 5px;
+}
+
+#bigContainer {
+  display: flex;
+}
+
+.result {
+width: 300px;
+background: #ecf0f1;
+border-radius: 16px;
+padding: 20px;
+font-size:13px;
+margin: 5px 5px 5px 5px;
+}
+
+.box {
+display: grid;
+grid-template-columns: repeat(2, 350px);
+gap: 2px;
+}
+
+.sum {
+  float: right;
+/* margin: 0px 20px; */
+}
+
+.flexContainer {
+ display: flex;
+ justify-content: space-between; 
+ width: 80px;
+}
+
+.stack {
+  word-wrap: break-word;
+  height: 120px;
+  display:flex;
+  flex-flow: column;
+  justify-content:space-between;
+  background: #fff;
+  padding: 10px;
+}
+
+#link {
+  width: 250px;
+  background: #ecf0f1;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 5px;
+}
