@@ -1,113 +1,45 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>Prisoner Training</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <section id="bigContainer">
-    <section id="input">
-      <p>
-        <label for="date">DATE</label>
-        <input type="date" id="date">
-      </p>
-      <p>
-        <label for="type">TYPE</label>
-        <select name=”type” id="type" for="type">
-          <optgroup label=push&nbsp;up>
-            <option value=wall&nbsp;push&nbsp;up>wall&nbsp;push&nbsp;up</option>
-            <option value=incline&nbsp;push&nbsp;up>incline&nbsp;push&nbsp;up</option>
-            <option value=kneeing&nbsp;push&nbsp;up>kneeing&nbsp;push&nbsp;up</option>
-            <option value=half&nbsp;push&nbsp;up>half&nbsp;push&nbsp;up</option>
-            <option value=full&nbsp;push&nbsp;up>full&nbsp;pushup</option>
-            <option value=close&nbsp;push&nbsp;up>close&nbsp;pushup</option>
-            <option value=uneven&nbsp;push&nbsp;up>next&nbsp;push&nbsp;up</option>
-            <option value=half&nbsp;one&nbsp;arm&nbsp;push&nbsp;up>half&nbsp;one&nbsp;arm&nbsp;push&nbsp;up</option>
-            <option value=lever&nbsp;push&nbsp;up>lever&nbsp;push&nbsp;up</option>
-            <option value=one&nbsp;arm&nbsp;push&nbsp;up>one&nbsp;arm&nbsp;push&nbsp;up</option>
-          </optgroup>
-          <optgroup label=pull&nbsp;up>
-            <option value=vertical&nbsp;pull>vertical&nbsp;pull</option>
-            <option value=horizontal&nbsp;pull>horizontal&nbsp;pull</option>
-            <option value=jack&nbsp;knife&nbsp;pull>jack&nbsp;knife&nbsp;pull</option>
-            <option value=half&nbsp;pull&nbsp;up>half&nbsp;pull&nbsp;up</option>
-            <option value=full&nbsp;pull&nbsp;up>full&nbsp;pull&nbsp;up</option>
-            <option value=close&nbsp;pull&nbsp;up>close&nbsp;pull&nbsp;up</option>
-            <option value=uneven&nbsp;pull&nbsp;up>uneven&nbsp;pull&nbsp;up</option>
-            <option value=half&nbsp;one&nbsp;arm&nbsp;pull&nbsp;up>half&nbsp;one&nbsp;arm&nbsp;pull&nbsp;up</option>
-            <option value=assisted&nbsp;one&nbsp;arm&nbsp;pull&nbsp;up>assisted&nbsp;one&nbsp;arm&nbsp;pull&nbsp;up</option>
-            <option value=one&nbsp;arm&nbsp;pull&nbsp;up>one&nbsp;arm&nbsp;pull&nbsp;up</option>
-          </optgroup>
-          <optgroup label=squat>
-            <option value=shoulder&nbsp;stand&nbsp;squat>shoulder&nbsp;stand&nbsp;squat</option>
-            <option value=jack&nbsp;knife&nbsp;squat>jack&nbsp;knife&nbsp;squat</option>
-            <option value=saported&nbsp;squat>saported&nbsp;squat</option>
-            <option value=half&nbsp;squat>half&nbsp;squat</option>
-            <option value=full&nbsp;squat>full&nbsp;squat</option>
-            <option value=close&nbsp;squat>close&nbsp;squat</option>
-            <option value=uneven&nbsp;squat>uneven&nbsp;squat</option>
-            <option value=half&nbsp;one&nbsp;leg&nbsp;sqat>half&nbsp;one&nbsp;leg&nbsp;sqat</option>
-            <option value=asisted&nbsp;one&nbsp;leg&nbsp;squat>asisted&nbsp;one&nbsp;leg&nbsp;squat</option>
-            <option value=one&nbsp;leg&nbsp;squat>one&nbsp;leg&nbsp;squat</option>
-          </optgroup>
-          <optgroup label=leg&nbsp;raise>
-            <option value=knee&nbsp;tack>knee&nbsp;tack</option>
-            <option value=flat&nbsp;knee&nbsp;raise>flat&nbsp;knee&nbsp;raise</option>
-            <option value=flat&nbsp;bent&nbsp;reg&nbsp;raise>flat&nbsp;bent&nbsp;reg&nbsp;raise</option>
-            <option value=flat&nbsp;flog&nbsp;raise>flat&nbsp;flog&nbsp;raise</option>
-            <option value=flat&nbsp;straight&nbsp;leg&nbsp;raise>flat&nbsp;straight&nbsp;leg&nbsp;raise</option>
-            <option value=hanging&nbsp;knee&nbsp;raise>hanging&nbsp;knee&nbsp;raise</option>
-            <option value=hanging&nbsp;bent&nbsp;leg&nbsp;raise>hanging&nbsp;bent&nbsp;leg&nbsp;raise</option>
-            <option value=hanging&nbsp;flog&nbsp;raise>hanging&nbsp;flog&nbsp;raise</option>
-            <option value=partial&nbsp;straight&nbsp;leg&nbsp;raise>partial&nbsp;straight&nbsp;leg&nbsp;raise</option>
-            <option value=hanging&nbsp;straight&nbsp;leg&nbsp;raise>hanging&nbsp;straight&nbsp;leg&nbsp;raise</option>
-          </optgroup>
-          <optgroup label=bridge>
-            <option value=short&nbsp;bridge>short&nbsp;bridge</option>
-            <option value=straight&nbsp;bridge>straight&nbsp;bridge</option>
-            <option value=angled&nbsp;bridge>angled&nbsp;bridge</option>
-            <option value=head&nbsp;bridge>head&nbsp;bridge</option>
-            <option value=half&nbsp;bridge>half&nbsp;bridge</option>
-            <option value=full&nbsp;bridge>full&nbsp;bridge</option>
-            <option value=wall&nbsp;walking&nbsp;bridge&nbsp;down>wall&nbsp;walking&nbsp;bridge&nbsp;down</option>
-            <option value=wall&nbsp;walking&nbsp;bridge&nbsp;up>wall&nbsp;walking&nbsp;bridge&nbsp;up</option>
-            <option value=closing&nbsp;bridge>closing&nbsp;bridge</option>
-            <option value=stand&nbsp;to&nbsp;stand&nbsp;bridge>stand&nbsp;to&nbsp;stand&nbsp;bridge</option>
-          </optgroup>
-          <optgroup label=hand&nbsp;stand&nbsp;push&nbsp;up>
-            <option value=wall&nbsp;head&nbsp;stand>wall&nbsp;head&nbsp;stand</option>
-            <option value=crow&nbsp;stand>crow&nbsp;stand</option>
-            <option value=wall&nbsp;hand&nbsp;stand>wall&nbsp;hand&nbsp;stand</option>
-            <option value=half&nbsp;hand&nbsp;stand>half&nbsp;hand&nbsp;stand</option>
-            <option value=hand&nbsp;stand&nbsp;push&nbsp;up>hand&nbsp;stand&nbsp;push&nbsp;up</option>
-            <option value=close&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up>close&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up</option>
-            <option value=uneven&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up>uneven&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up</option>
-            <option value=half&nbsp;one&nbsp;arm&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up>half&nbsp;one&nbsp;arm&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up</option>
-            <option value=lever&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up>lever&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up</option>
-            <option value=one&nbsp;arm&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up>one&nbsp;arm&nbsp;hand&nbsp;stand&nbsp;push&nbsp;up</option>
-          </optgroup>
-        </select>
-      </p>
-      <p id="inputSet">
-        <label for="set1">SET1</label>
-        <input type="number" id="set1" value=0>
-        <label for="set2">SET2</label>
-        <input type="number" id="set2" for="set2"  value=0>
-        <label for="set3">SET3</label>
-        <input type="number" id="set3" for="set3"  value=0>
-      </p>
-      <input type="button" value="submit" id="submit">
-    </section>
-    <section id="link">
-      <button id="result">progress</button>
-    </section>
-  </section>
-  <section id="container">
-    <button id="clear">all clear</button>  
-    <p id="record"></p>  
-  </section>
+  <head>
+    <meta charset="utf-8">
+    <title>My Portfolio</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="description" content="マルコムのポートフォリオサイトです。">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+    <div class="container">
+        <div class="icon">
+          <img src="img/360x360.png" width="120" heigth="120" alt="マルコムの画像です">
+        </div>
+        <div class="info">
+          <h1>マルコム</h1>
+          <p>フロントエンドエンジニア見習いです。</p>
+        </div>
+      </div>
+      </header>
+      <section class="works">
+        <h1>ポートフォリオ</h1>
 
-  <script src="js/main.js"></script>
-</body>
+        <section>
+          <img src="img/dummy.jpg" width="400px" height="260px" alt="アプリの紹介写真です">
+          <h1>トレーニング記録アプリ</h1>
+          <p>プリズナートレーニング専用記録アプリです。ポールウェイドさんの著書で紹介されたトレーニング方法に基づいたトレーニング記録アプリです。日付、トレーニングの種類、回数を入力することで、項目がローカルストレージに記録されます。回数の合計を確認することもできます。</p>
+          <a href="https://malcolmyz.github.io/prisoner-training/">トレーニング記録アプリへ</a>
+        </section>
+
+        <section>
+          <img src="img/dummy.jpg" width="400px" height="260px" alt="アプリの紹介写真です">
+          <h1>さんすうトレーニングアプリ</h1>
+          <p>計算力を鍛えるアプリです。演算の種類、問題数、難易度を選択できるようになっています。問題を繰り返し解くことで計算力を鍛えます。</p>
+          <a href="">さんすうトレーニングアプリへ</a>
+        </section>
+
+      </section>
+
+    <footer>
+      <p>©️ 2021 malcolm</p>
+    </footer>
+  </body>
 </html>
